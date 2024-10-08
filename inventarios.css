@@ -1,0 +1,184 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f0f4f8; /* Color de fondo suave */
+    color: #34495e; /* Color del texto principal */
+}
+
+header {
+    background-color: #34495e; /* Color oscuro */
+    color: #ecf0f1; /* Color claro para el texto */
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    animation: fadeIn 1s;
+    border-bottom: 5px solid #2980b9; /* Línea inferior para resaltar */
+}
+
+header h1 {
+    margin-bottom: 10px;
+    font-size: 2.5rem; /* Tamaño de fuente más grande */
+}
+
+.menu {
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.menu-icon {
+    width: 30px;
+    height: 3px;
+    background-color: #ecf0f1; /* Color del menú */
+    margin: 5px;
+    transition: all 0.3s;
+}
+
+.nav-hidden {
+    display: none;
+}
+
+nav {
+    margin-top: 20px;
+}
+
+nav a {
+    color: #ecf0f1; /* Color de los enlaces */
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    transition: background-color 0.3s, transform 0.2s;
+    transform: scale(1);
+}
+
+nav a:hover {
+    background-color: #2980b9; /* Color de fondo al pasar el mouse */
+    transform: scale(1.05);
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white; /* Fondo blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    animation: slideIn 0.5s ease-in-out;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem; /* Tamaño de fuente del encabezado */
+    text-align: center; /* Centrar el texto */
+    animation: fadeIn 1s;
+}
+
+.form-control {
+    width: 100%;
+    padding: 15px; /* Relleno mayor para más comodidad */
+    margin-bottom: 15px;
+    border: 2px solid #bdc3c7; /* Borde gris claro */
+    border-radius: 5px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-control:focus {
+    border-color: #2980b9; /* Color del borde al enfocar */
+    outline: none;
+    box-shadow: 0 0 5px rgba(41, 128, 185, 0.5); /* Resplandor suave */
+}
+
+.btn {
+    background-color: #2980b9; /* Color principal de los botones */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 1rem; /* Tamaño de fuente */
+}
+
+.btn:hover {
+    background-color: #3498db; /* Color al pasar el mouse */
+    transform: translateY(-2px); /* Efecto de elevación */
+}
+
+.btn-secondary {
+    background-color: #7f8c8d; /* Color del botón secundario */
+}
+
+.btn-secondary:hover {
+    background-color: #95a5a6; /* Color al pasar el mouse */
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.table th, .table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #bdc3c7; /* Borde inferior de las celdas */
+}
+
+.table th {
+    background-color: #ecf0f1; /* Fondo gris claro para encabezados */
+    font-weight: bold; /* Negrita para el encabezado */
+}
+
+.table tr:hover {
+    background-color: #dfe6e9; /* Color de fondo al pasar el mouse sobre filas */
+    animation: pulse 0.3s ease-in-out; /* Animación al pasar */
+}
+
+.btn-danger {
+    background-color: #e74c3c; /* Color para el botón de eliminar */
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #c0392b; /* Color al pasar el mouse */
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.02);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
